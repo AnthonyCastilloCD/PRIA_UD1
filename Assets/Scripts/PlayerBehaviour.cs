@@ -56,7 +56,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         _rb.MoveRotation(_rb.rotation * angleRot);
 
-        if (_isJumping)
+        if (_isJumping && isGrounded())
         {
             _rb.AddForce(Vector3.up * JumpVelocity, ForceMode.Impulse);
         }
